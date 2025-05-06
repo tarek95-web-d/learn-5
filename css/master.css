@@ -287,7 +287,7 @@ html {
 /* start Testimonials */
 .testimonials {
   min-height: 100vh;
-  background: url(/image/infinite-loop-02.jpg);
+  background: url(../image/infinite-loop-02.jpg);
   background-size: cover;
   position: relative;
 }
