@@ -54,7 +54,6 @@ html {
 
 /* end container */
 /* start section */
-
 /* end section */
 /* start header */
 .header {
@@ -136,7 +135,7 @@ html {
 /* end header */
 /* start landing */
 .landing-page {
-  background-image: url(/image/infinite-loop-01.jpg);
+  background-image: url(../image/infinite-loop-01.jpg);
   background-size: cover;
   height: 100vh;
   position: relative;
