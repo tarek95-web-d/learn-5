@@ -1,0 +1,598 @@
+/* start important */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* end important */
+/* start variable */
+:root {
+  --main-color: #065f89;
+  --second-color: #51508b;
+  --therd-color: #737373;
+  --main-transition: 0.5s;
+}
+
+/* end variable */
+/* start container */
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+@media (min-width:1100px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (max-width:1100px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width:767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* end container */
+/* start section */
+
+/* end section */
+/* start header */
+.header {
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  min-height: fit-content;
+}
+
+.header .logo {
+  padding: 15px;
+  padding-left: 0;
+}
+
+.header .logo h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  transition: var(--main-transition);
+}
+
+.header .logo h1:hover {
+  color: var(--main-color);
+}
+
+.header i {
+  color: white;
+  position: absolute;
+  right: 10%;
+}
+
+@media (min-width:770px) {
+  .header i {
+    display: none;
+  }
+}
+
+.header nav {
+  flex: 1;
+}
+
+@media (max-width:770px) {
+  .header nav {
+    display: none;
+  }
+}
+
+.header nav li {
+  display: flex;
+  justify-content: end;
+}
+
+.header nav li a {
+  color: white;
+  padding: 20px;
+  transition: var(--main-transition);
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+@media (max-width:870px) {
+  .header nav li a {
+    padding: 10px;
+  }
+}
+
+.header nav li a:hover,
+.header nav li a:active {
+  background-color: var(--main-color);
+}
+
+/* end header */
+/* start landing */
+.landing-page {
+  background-image: url(/image/infinite-loop-01.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.landing-page .text-landing {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+
+.landing-page .text-landing h1 {
+  font-size: 4em;
+  font-weight: 500;
+  text-shadow: 1px 1px 8px black;
+  letter-spacing: -3px;
+  color: white;
+}
+
+.landing-page .text-landing p {
+  color: white;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 8px black;
+}
+
+@media (max-width:700px) {
+  .landing-page .text-landing {
+    width: 100%;
+  }
+
+  .landing-page .text-landing h1 {
+    font-size: 3em;
+  }
+
+  .landing-page .text-landing p {
+    font-size: 1em;
+  }
+}
+
+.landing-page a {
+  position: absolute;
+  top: 74%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  background: var(--main-color);
+  padding: 20px 40px;
+  color: white;
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+
+.landing-page a:hover {
+  padding: 25px 50px;
+}
+
+/* end landing */
+/* start what we do */
+.page-2 {
+  background: white;
+  color: var(--main-color);
+  min-height: 100vh;
+}
+
+.info-the-page {
+  margin: 80px 0;
+}
+
+.info-the-page h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+}
+
+.info-the-page p {
+  line-height: 1.5;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 10px 0;
+  color: var(--therd-color);
+}
+
+.page-2 .info-the-page a {
+  font-size: 1.2em;
+  color: var(--second-color);
+  font-weight: 700;
+}
+
+.page-2 .about-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 80px;
+}
+
+@media (max-width:500px) {
+  .page-2 .about-page {
+    grid-template-columns: auto;
+  }
+}
+
+.page-2 .about-page .about-1 {
+  display: flex;
+}
+
+.page-2 .about-page .about-1 .text-about-1 {
+  margin-left: 30px;
+}
+
+.page-2 .about-page .about-1 .text-about-1 h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.page-2 .about-page .about-1 .text-about-1 p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: var(--therd-color);
+}
+
+.page-2 .about-page .about-1 .text-about-1 .link-more {
+  margin: 32px 0;
+}
+
+@media (max-width:500px) {
+  .page-2 .about-page .about-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-2 .about-page .about-1 .text-about-1 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .page-2 .about-page .about-1 .text-about-1 .link-more {
+    margin: 32px auto;
+  }
+}
+
+.link-more a {
+  color: white;
+  padding: 15px 32px;
+  background: var(--second-color);
+  border-radius: 11px;
+}
+
+/* end what we do */
+/* start Testimonials */
+.testimonials {
+  min-height: 100vh;
+  background: url(/image/infinite-loop-02.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.testimonials .info-the-page {
+  text-align: center;
+  padding: 65px 0;
+  width: 60%;
+  margin: auto;
+  color: white;
+}
+
+@media (max-width:1100px) {
+  .testimonials .info-the-page {
+    padding: 0px;
+    width: 100%;
+  }
+}
+
+.testimonials .info-the-page h1 {
+  text-transform: uppercase;
+  margin: 10px 0;
+  font-size: 3em;
+}
+
+@media (max-width:770px) {
+  .testimonials .info-the-page h1 {
+    font-size: 1.7em;
+  }
+}
+
+.testimonials .info-the-page p {
+  margin-top: 20px;
+}
+
+.testimonials .card-1 {
+  width: calc((100% - 45px) / 4);
+  text-align: center;
+}
+
+@media (max-width:900px) {
+  .testimonials .card-1 {
+    width: calc((100% - 45px) / 2);
+  }
+}
+
+@media (max-width:500px) {
+  .testimonials .card-1 {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+.not-god-1 {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+}
+
+.not-god-2 {
+  position: absolute;
+  top: 57%;
+  left: 29%;
+}
+
+.not-god-3 {
+  position: absolute;
+  top: 30%;
+  right: 25%;
+}
+
+.not-god-4 {
+  position: absolute;
+  top: 57%;
+  right: 5%;
+}
+
+@media (max-width:1100px) {
+  .testimonials .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+  }
+
+  .not-god-1,
+  .not-god-2,
+  .not-god-3,
+  .not-god-4 {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+
+@media (max-width:767px) {
+  .testimonials .cards {
+    flex-direction: column;
+  }
+}
+
+.testimonials .card-1 .img img {
+  border-radius: 50%;
+  margin: 16px;
+}
+
+.testimonials .card-1 p {
+  color: white;
+  line-height: 1.7;
+  font-size: 1.2em;
+}
+
+.testimonials .card-1 span {
+  color: white;
+  font-size: large;
+  font-weight: 400;
+  background-color: var(--second-color);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+/* end Testimonials */
+/* start gallery */
+.gallery .info-the-page {
+  color: var(--main-color);
+  text-align: center;
+}
+
+.gallery .info-the-page h1 {
+  font-weight: 400;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.gallery .info-the-page p {
+  font-size: 0.9em;
+}
+
+.gallery .images {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 10px;
+}
+
+.gallery .images .img-1 {
+  position: relative;
+  transition: 0.5s;
+  margin-bottom: 50px;
+}
+
+.gallery .images .img-1:hover .trans,
+.gallery .images .img-1:hover h1 {
+  display: block;
+}
+
+.gallery .images .img-1 .trans {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.gallery .images .img-1 h1 {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  z-index: 1;
+}
+
+.gallery .images .img-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* end gallery */
+/* start contact */
+.contact {
+  background: url(../image/infinite-loop-03.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.contact .info-the-page {
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+.contact .info-the-page h1 {
+  font-weight: 400;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.contact .info-the-page p {
+  font-size: 0.9em;
+}
+
+.contact .forms-links {
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+}
+
+@media (max-width: 767px) {
+  .contact .forms-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .contact .forms {
+    margin-bottom: 50px;
+  }
+}
+
+.contact input,
+textarea {
+  padding: 10px;
+  width: 336px;
+  box-sizing: inherit;
+  resize: none;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--second-color);
+}
+
+.contact input[type=submit] {
+  width: 150px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.contact .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  margin-left: 72px;
+}
+
+.contact .links .mass {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  .contact .links .mass {
+    margin-bottom: 20px;
+  }
+}
+
+.contact .links .icone a {
+  color: white;
+  position: relative;
+  right: -15px;
+  transition: 0.3s;
+}
+
+.contact .links .icone a:hover {
+  color: var(--main-color);
+}
+
+.contact .links .icone a i {
+  margin-right: 20px;
+}
+
+.contact .fotter {
+  color: white;
+  margin-bottom: 29px;
+  display: inline-block;
+  width: 100%;
+
+}
+
+.contact .fotter p {
+  text-align: center;
+}
+.contact .fotter span a {
+  color: var(--second-color);
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* end contact */
